@@ -1,0 +1,16 @@
+www/images/
+venv
+__pycache__
+www_old/
+www_202505/
+www_20260125/
+.DS_Store
+.env
+www/thumbnail/
+logs/
+req/
+!req/mysql.class.prod
+!req/vars.class.prod
+!req/utils.class
+old/
+cache/
