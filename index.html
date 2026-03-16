@@ -184,20 +184,20 @@ footer {
   bottom: 24px;
   right: 24px;
   z-index: 9999;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  border: 1px solid #ddd;
-  background: #fff;
+  border: none;
+  background: #2563eb;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(37,99,235,0.4);
+  transition: box-shadow 0.2s, transform 0.2s;
 }
-.chat-toggle:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
-.chat-toggle svg { width: 22px; height: 22px; fill: #333; }
+.chat-toggle:hover { box-shadow: 0 6px 20px rgba(37,99,235,0.5); transform: scale(1.05); }
+.chat-toggle svg { width: 24px; height: 24px; fill: #fff; }
 
 .chat-panel {
   position: fixed;
