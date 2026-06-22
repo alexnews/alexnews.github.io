@@ -241,7 +241,7 @@
 		<header>
 			<span class="image avatar"><img src="images/avatar.jpg" alt="Alex Kargin" /></span>
 			<h1 id="logo"><a href="#">Alex Kargin</a></h1>
-			<p>Data Engineer</p>
+			<p>Data &amp; AI Engineer</p>
 			<!-- TODO: Replace # with your actual CV URL -->
 			<ul class="actions special">
 				<li><a href="#" class="button">Download CV</a></li>
@@ -278,7 +278,7 @@
 					</div>
 					<div class="hero-overlay">
 						<h2>Alex Kargin</h2>
-						<div class="hero-role">Data Engineer</div>
+						<div class="hero-role">Data &amp; AI Engineer</div>
 						<div class="hero-contacts">
 							<a href="mailto:alex.kargin@gmail.com">
 								<svg viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
@@ -344,7 +344,7 @@
 							<a href="https://celebritymention.com" target="_blank" rel="noopener" class="image"><img src="images/proj-celebritymention.jpg" alt="CelebrityMention" /></a>
 							<div class="inner">
 								<h4>CelebrityMention.com</h4>
-								<p>Real-time news monitoring system that ingests 100+ articles daily from 30+ RSS feeds, applies spaCy NER to identify mentions across a 132K celebrity database, and scores content on a 1&ndash;10 severity scale with fuzzy name matching.</p>
+								<p>Real-time celebrity-news intelligence. Ingests articles from 30+ feeds, embeds them with NVIDIA NIM models, and matches each story to the right person via <strong>pgvector vector-similarity search</strong> across 76K+ articles and 22K+ embedded entities &mdash; with a dominance gate to eliminate false positives. Includes <strong>PodTalk</strong>, a YouTube-transcript pipeline that extracts verbatim quotes with automated fact-checking (94% exact, zero fabrication).</p>
 								<ul class="actions special">
 									<li><a href="https://celebritymention.com" target="_blank" rel="noopener" class="button primary">View Project</a></li>
 								</ul>
@@ -366,7 +366,7 @@
 							<a href="https://laurela.com" target="_blank" rel="noopener" class="image"><img src="images/proj-laurela.jpg" alt="Laurela" /></a>
 							<div class="inner">
 								<h4>Laurela.com</h4>
-								<p>Prediction market analytics with dual-server architecture. A local GPU analytics engine orchestrated by Dagster pushes processed data to production via SSH tunneling for real-time market insights with LLM-powered analysis.</p>
+								<p>Production document-ordering platform for apostille &amp; notarized-translation services. 56 document types with dynamic forms, cart and guest/OTP checkout via Stripe, auto-generated invoices and order references, an admin order desk, and Telegram alerts &mdash; on a Next.js/PostgreSQL stack with full SEO architecture (per-document pages, sitemap, JSON-LD).</p>
 								<ul class="actions special">
 									<li><a href="https://laurela.com" target="_blank" rel="noopener" class="button primary">View Project</a></li>
 								</ul>
@@ -377,7 +377,8 @@
 							<a href="https://boss.cc" target="_blank" rel="noopener" class="image"><img src="images/proj-boss.jpg" alt="Boss.cc" /></a>
 							<div class="inner">
 								<h4>Boss.cc</h4>
-								<p>Multi-model AI evaluation platform that validates startup ideas by orchestrating an ensemble of five large language models (Llama-4 Maverick, Qwen3-Next 80B, Mistral Medium 3.5, and NVIDIA Nemotron 30B/49B reasoning models) across five assessment lenses &mdash; feasibility, market sizing, competition, unit economics, and risk. An LLM synthesis judge aggregates the ensemble into a GO / PIVOT / NO-GO verdict in ~10 seconds, with prompt engineering and shareable public results.</p>
+								<p>Multi-model AI evaluation platform that validates startup ideas by orchestrating an ensemble of five large language models (Llama-4 Maverick, Qwen3-Next 80B, Mistral Medium 3.5, and NVIDIA Nemotron 30B/49B reasoning models) across five assessment lenses &mdash; feasibility, market sizing, competition, unit economics, and risk &mdash; with an LLM synthesis judge producing a GO / PIVOT / NO-GO verdict in ~10 seconds.</p>
+								<p>Behind it runs an automated discovery pipeline: hourly <strong>Airflow</strong> DAGs ingest Stack Exchange, Hacker News, Lobsters and Dev.to, embed and dedup with <strong>pgvector</strong>, extract and TRIZ-score candidate ideas, then auto-publish the strongest &mdash; with provider failover across the model chain and a weekly literary-voice digest.</p>
 								<ul class="actions special">
 									<li><a href="https://boss.cc" target="_blank" rel="noopener" class="button primary">View Project</a></li>
 								</ul>
@@ -403,6 +404,17 @@
 								<p>Automated LLM content pipeline that ingests ~15 weekly AI, ML, and data-engineering events, performs topic extraction and clustering, then uses prompt-engineered generation to synthesize them into a single long-form narrative in rotating literary author voices (Tolstoy, Hemingway, Kafka). Scheduled weekly run with RSS feed ingestion, NLP summarization, and email/RSS distribution &mdash; 11 issues published.</p>
 								<ul class="actions special">
 									<li><a href="https://www.kargin-utkin.com/digest" target="_blank" rel="noopener" class="button primary">View Project</a></li>
+								</ul>
+							</div>
+						</article>
+
+						<article>
+							<a href="https://tennis.us" target="_blank" rel="noopener" class="image"><img src="images/proj-tennis.jpg" alt="Tennis.us" /></a>
+							<div class="inner">
+								<h4>Tennis.us</h4>
+								<p>AI-powered tennis community platform built across 14 phases. <strong>Geospatial venue clustering</strong> groups raw court polygons into named venues with addresses and directions; <strong>AI player-matchmaking</strong> pairs players by level and location; plus ladders, matches, events, and a full design system &mdash; on a Next.js/FastAPI stack with production deploy parity.</p>
+								<ul class="actions special">
+									<li><a href="https://tennis.us" target="_blank" rel="noopener" class="button primary">View Project</a></li>
 								</ul>
 							</div>
 						</article>
