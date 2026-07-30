@@ -330,6 +330,42 @@
 					<div class="features">
 
 						<article>
+							<a href="https://franchise.kargin-utkin.com" target="_blank" rel="noopener" class="image"><img src="images/proj-franchiselens.jpg" alt="FranchiseLens" /></a>
+							<div class="inner">
+								<h4>FranchiseLens</h4>
+								<p>Document-intelligence engine over public <strong>Franchise Disclosure Documents</strong> &mdash; the ~300-page filings franchisors must register with US states. It pulls filings from state registries and runs a <strong>local-LLM extraction pipeline</strong> that lifts the numbers buyers actually care about: total initial investment, franchise fee, royalty, ad fund, net-worth and liquid-capital requirements, agreement term, and outlet counts. <strong>908 franchises loaded</strong>, with a coverage survey across 65 fitness &amp; sports brands.</p>
+								<p>Every figure is <strong>grounded to the exact page it came from</strong> (p.18, p.47&hellip;) and flagged for review when it can't be verified &mdash; so a side-by-side brand comparison, a natural-language <em>Ask</em> over the documents, and a browsable directory all stay auditable. Runs entirely on self-hosted models, no third-party LLM API.</p>
+								<ul class="actions special">
+									<li><a href="https://franchise.kargin-utkin.com" target="_blank" rel="noopener" class="button primary">View Project</a></li>
+								</ul>
+							</div>
+						</article>
+
+						<article>
+							<a href="https://claim.kargin-utkin.com" target="_blank" rel="noopener" class="image"><img src="images/proj-claimlens.jpg" alt="ClaimLens" /></a>
+							<div class="inner">
+								<h4>ClaimLens</h4>
+								<p><strong>Multimodal</strong> case-file builder for Florida no-fault (PIP) car-accident claims. It ingests police reports, medical records and itemized bills, insurance declarations, and crash photos, then fills a <strong>typed demand-package schema</strong> &mdash; parties, liability, injuries, damages, lost income, coverage &mdash; instead of returning a pile of RAG Q&amp;A. A vision model reads damage and injury photographs into structured findings, not just the text documents.</p>
+								<p>A chronology engine assembles dated events into one timeline and flags Florida's hard statutory gates &mdash; the <strong>14-day PIP treatment rule</strong> and the 30-day insurer window &mdash; while a checklist engine detects <strong>missing documents</strong> (radiology, lost-wage proof, liens) before the package is sent. Every conclusion links back to its source page or photo, and the whole package exports as a cited PDF. Demo on synthetic data, running on free local models.</p>
+								<ul class="actions special">
+									<li><a href="https://claim.kargin-utkin.com" target="_blank" rel="noopener" class="button primary">View Project</a></li>
+								</ul>
+							</div>
+						</article>
+
+						<article>
+							<a href="https://bookkeeper.kargin-utkin.com" target="_blank" rel="noopener" class="image"><img src="images/proj-bookkeeperlens.jpg" alt="BookkeeperLens" /></a>
+							<div class="inner">
+								<h4>BookkeeperLens</h4>
+								<p>Bookkeeping cleanup engine that turns messy bank statements and a shoebox of receipts into <strong>double-entry, Schedule C-ready books</strong> &mdash; in five stages: <strong>upload</strong> (PDF/CSV statements plus receipt photos, no bank linking), <strong>extract</strong> (every statement line becomes a transaction that keeps its page and line provenance; a vision model reads receipts into vendor, date, tax and total), <strong>categorize</strong> (a Schedule C account with a confidence score and the reason it was chosen, with likely-personal spend flagged instead of deducted), <strong>reconcile</strong> (each month checked against the statement's ending balance, each receipt matched to the bank line that paid it), and <strong>report</strong>.</p>
+								<p>Output is a <strong>tax-readiness score out of 100</strong>, a prioritized fix list, a P&amp;L and balance sheet, and a trial balance that foots to zero &mdash; catching duplicates, miscategorizations, stale uncleared items and missing receipts along the way, with every number traceable to the paper it came from. Built as a self-serve path off outsourced bookkeeping (Bench), running on the free NVIDIA NIM tier or fully private via <strong>Ollama</strong>.</p>
+								<ul class="actions special">
+									<li><a href="https://bookkeeper.kargin-utkin.com" target="_blank" rel="noopener" class="button primary">View Project</a></li>
+								</ul>
+							</div>
+						</article>
+
+						<article>
 							<a href="https://legacytocloud.com" target="_blank" rel="noopener" class="image"><img src="images/proj-legacytocloud.jpg" alt="LegacyToCloud" /></a>
 							<div class="inner">
 								<h4>LegacyToCloud.com</h4>
