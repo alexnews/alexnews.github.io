@@ -299,9 +299,11 @@
 					<header class="major">
 						<h2>About Me</h2>
 					</header>
-					<p>I'm <strong>Alex Kargin</strong>, a data and ML/AI engineer based in Boca Raton, Florida. I build production data pipelines and applied AI systems &mdash; the kind that actually get used, not the kind that win a hackathon and die in a prototype folder.</p>
-					<p>I founded <a href="https://www.kargin-utkin.com" target="_blank" rel="noopener">kargin-utkin.com</a>, a data engineering publication with hands-on writeups on PostgreSQL, ClickHouse, dbt, Airflow, PySpark and Kafka &mdash; plus a 14-course Learn platform covering SQL fundamentals through distributed systems internals. I also founded <a href="https://www.innovateksolutionsinc.com" target="_blank" rel="noopener">InnovaTek Solutions</a>, a consultancy specializing in private AI installations and legacy-system modernization for regulated industries.</p>
-					<p>Currently focused on Snowflake data warehousing, Dagster orchestration, building end-to-end ELT pipelines, and self-hosted LLM deployments for air-gapped environments.</p>
+					<p>I&rsquo;m <strong>Alex Kargin</strong>, a Senior Data and Analytics Engineer based in Boca Raton, Florida.</p>
+					<p>I build data solutions end to end&mdash;from raw operational data and complicated business rules to trusted Snowflake models, Power BI dashboards, APIs, and production AI applications.</p>
+					<p>My experience combines data engineering, analytics engineering, business intelligence, and applied AI. I work across Snowflake, dbt, Dagster, Airflow, Power BI, Python, SQL, AWS, Azure, PostgreSQL, ClickHouse, FastAPI, and Next.js.</p>
+					<p>I have delivered analytics solutions supporting Finance, Accounting, Operations, Marketing, forecasting, and executive reporting. My work includes dimensional modeling, semantic models, DAX, KPI development, data-quality validation, cloud migrations, performance optimization, governance, and production support.</p>
+					<p>I also build practical AI systems, including document intelligence, RAG, vector search, NLP, computer vision, and private LLM applications. My focus is not AI for demonstration purposes&mdash;it is using the right technology to solve a real business problem reliably, securely, and cost-effectively.</p>
 				</div>
 			</section>
 
@@ -310,14 +312,13 @@
 				<div class="container">
 					<h3>Skills</h3>
 					<ul class="feature-icons">
-						<li class="icon solid fa-database">Data Warehousing: Snowflake, dbt, Star Schema, SCD, RBAC</li>
-						<li class="icon solid fa-code">Python: FastAPI, Pandas, scikit-learn, spaCy NLP</li>
-						<li class="icon solid fa-server">Databases: PostgreSQL, ClickHouse, MySQL, Redis</li>
-						<li class="icon solid fa-cogs">Orchestration: Dagster, Airflow, DAGs, Scheduling</li>
-						<li class="icon solid fa-cloud">Cloud & DevOps: Docker, Azure Data Factory, CI/CD</li>
-						<li class="icon solid fa-robot">AI/ML: Ollama/LLM, Groq, Embeddings, NER</li>
-						<li class="icon solid fa-project-diagram">Architecture: Microservices, REST APIs, ETL/ELT</li>
-						<li class="icon solid fa-laptop-code">Frontend: Next.js, React, TypeScript</li>
+						<li class="icon solid fa-chart-bar"><strong>Analytics &amp; Business Intelligence:</strong> Power BI, DAX, semantic models, KPI development, dashboards, data visualization, executive reporting, data reconciliation</li>
+						<li class="icon solid fa-database"><strong>Data Engineering:</strong> Snowflake, dbt, Dagster, Airflow, ETL/ELT, data pipelines, dimensional modeling, star schemas, slowly changing dimensions</li>
+						<li class="icon solid fa-code"><strong>Programming &amp; Databases:</strong> Python, SQL, PostgreSQL, MySQL, SQL Server, ClickHouse, FastAPI</li>
+						<li class="icon solid fa-cloud"><strong>Cloud &amp; Delivery:</strong> AWS, Azure, Azure Data Factory, Azure DevOps, GitHub Actions, CI/CD, Docker, Linux</li>
+						<li class="icon solid fa-shield-alt"><strong>Data Governance &amp; Quality:</strong> RBAC, masking, lineage, data validation, testing, observability, metadata, performance and cost optimization</li>
+						<li class="icon solid fa-robot"><strong>Applied AI:</strong> RAG, document intelligence, vector search, pgvector, local LLMs, prompt engineering, NLP, entity extraction, computer vision</li>
+						<li class="icon solid fa-laptop-code"><strong>Application Development:</strong> REST APIs, Next.js, React, TypeScript, JavaScript</li>
 					</ul>
 				</div>
 			</section>
@@ -326,8 +327,21 @@
 			<section id="portfolio">
 				<div class="container">
 					<h3>Portfolio</h3>
-					<p>Production systems handling real-time data, ML pipelines, and cloud infrastructure.</p>
+					<p>Production data, analytics, business intelligence, and AI systems&mdash;from source ingestion and modeling through dashboards, APIs, applications, and deployment.</p>
 					<div class="features">
+						<article>
+							<a href="https://franchise.kargin-utkin.com/powerbi" target="_blank" rel="noopener" class="image"><img src="images/proj-powerbi-franchise.jpg" alt="Power BI Franchise Investment &amp; Economics" /></a>
+							<div class="inner">
+								<h4>Power BI Franchise Investment &amp; Economics</h4>
+								<p>Designed and built a <strong>four-page Power BI report</strong> covering <strong>908 U.S. franchise brands</strong> across <strong>34 business categories</strong>.</p>
+								<p>The report transforms franchise disclosure data into interactive investment, fee, and category benchmarks using <strong>dimensional modeling</strong>, <strong>DAX measures</strong>, searchable slicers, dynamic sorting, and a live HTTPS data source.</p>
+								<p>Implemented documented <strong>data-quality controls</strong> for incomplete disclosures, small sample sizes, duplicate records, missing financial values, and statistical anomalies.</p>
+								<p>The case study includes report screenshots, analytical findings, technical documentation, and downloadable <strong>PBIX</strong> files.</p>
+								<ul class="actions special">
+									<li><a href="https://franchise.kargin-utkin.com/powerbi" target="_blank" rel="noopener" class="button primary">View Power BI Case Study</a></li>
+								</ul>
+							</div>
+						</article>
 
 						<article>
 							<a href="https://franchise.kargin-utkin.com" target="_blank" rel="noopener" class="image"><img src="images/proj-franchiselens.jpg" alt="FranchiseLens" /></a>
@@ -337,6 +351,51 @@
 								<p>Every figure is <strong>grounded to the exact page it came from</strong> (p.18, p.47&hellip;) and flagged for review when it can't be verified &mdash; so a side-by-side brand comparison, a natural-language <em>Ask</em> over the documents, and a browsable directory all stay auditable. Runs entirely on self-hosted models, no third-party LLM API.</p>
 								<ul class="actions special">
 									<li><a href="https://franchise.kargin-utkin.com" target="_blank" rel="noopener" class="button primary">View Project</a></li>
+								</ul>
+							</div>
+						</article>
+
+						<article>
+							<a href="https://tennis.us" target="_blank" rel="noopener" class="image"><img src="images/proj-tennis.jpg" alt="Tennis.us" /></a>
+							<div class="inner">
+								<h4>Tennis.us</h4>
+								<p>AI-powered tennis community platform built across 14 phases. <strong>Geospatial venue clustering</strong> groups raw court polygons into named venues with addresses and directions; <strong>AI player-matchmaking</strong> pairs players by level and location; plus ladders, matches, events, and a full design system &mdash; on a Next.js/FastAPI stack with production deploy parity.</p>
+								<ul class="actions special">
+									<li><a href="https://tennis.us" target="_blank" rel="noopener" class="button primary">View Project</a></li>
+								</ul>
+							</div>
+						</article>
+
+						<article>
+							<a href="https://legacytocloud.com" target="_blank" rel="noopener" class="image"><img src="images/proj-legacytocloud.jpg" alt="LegacyToCloud" /></a>
+							<div class="inner">
+								<h4>LegacyToCloud.com</h4>
+								<p>Database migration platform that analyzes legacy MySQL/PostgreSQL/MSSQL schemas and generates cloud-ready DDL for PostgreSQL and Snowflake. Includes a real-time financial data pipeline (Alpha Vantage &rarr; PostgreSQL &rarr; ClickHouse) with interactive dashboards.</p>
+								<ul class="actions special">
+									<li><a href="https://legacytocloud.com" target="_blank" rel="noopener" class="button primary">View Project</a></li>
+								</ul>
+							</div>
+						</article>
+
+						<article>
+							<a href="https://celebritymention.com" target="_blank" rel="noopener" class="image"><img src="images/proj-celebritymention.jpg" alt="CelebrityMention" /></a>
+							<div class="inner">
+								<h4>CelebrityMention.com</h4>
+								<p>Real-time celebrity-news intelligence. Ingests articles from 30+ feeds, embeds them with NVIDIA NIM models, and matches each story to the right person via <strong>pgvector vector-similarity search</strong> across 76K+ articles and 22K+ embedded entities &mdash; with a dominance gate to eliminate false positives. Includes <strong>PodTalk</strong>, a YouTube-transcript pipeline that extracts verbatim quotes with automated fact-checking (94% exact, zero fabrication).</p>
+								<ul class="actions special">
+									<li><a href="https://celebritymention.com" target="_blank" rel="noopener" class="button primary">View Project</a></li>
+								</ul>
+							</div>
+						</article>
+
+						<article>
+							<a href="https://boss.cc" target="_blank" rel="noopener" class="image"><img src="images/proj-boss.jpg" alt="Boss.cc" /></a>
+							<div class="inner">
+								<h4>Boss.cc</h4>
+								<p>Multi-model AI evaluation platform that validates startup ideas by orchestrating an ensemble of five large language models (Llama-4 Maverick, Qwen3-Next 80B, Mistral Medium 3.5, and NVIDIA Nemotron 30B/49B reasoning models) across five assessment lenses &mdash; feasibility, market sizing, competition, unit economics, and risk &mdash; with an LLM synthesis judge producing a GO / PIVOT / NO-GO verdict in ~10 seconds.</p>
+								<p>Behind it runs an automated discovery pipeline: hourly <strong>Airflow</strong> DAGs ingest Stack Exchange, Hacker News, Lobsters and Dev.to, embed and dedup with <strong>pgvector</strong>, extract and TRIZ-score candidate ideas, then auto-publish the strongest &mdash; with provider failover across the model chain and a weekly literary-voice digest.</p>
+								<ul class="actions special">
+									<li><a href="https://boss.cc" target="_blank" rel="noopener" class="button primary">View Project</a></li>
 								</ul>
 							</div>
 						</article>
@@ -366,28 +425,6 @@
 						</article>
 
 						<article>
-							<a href="https://legacytocloud.com" target="_blank" rel="noopener" class="image"><img src="images/proj-legacytocloud.jpg" alt="LegacyToCloud" /></a>
-							<div class="inner">
-								<h4>LegacyToCloud.com</h4>
-								<p>Database migration platform that analyzes legacy MySQL/PostgreSQL/MSSQL schemas and generates cloud-ready DDL for PostgreSQL and Snowflake. Includes a real-time financial data pipeline (Alpha Vantage &rarr; PostgreSQL &rarr; ClickHouse) with interactive dashboards.</p>
-								<ul class="actions special">
-									<li><a href="https://legacytocloud.com" target="_blank" rel="noopener" class="button primary">View Project</a></li>
-								</ul>
-							</div>
-						</article>
-
-						<article>
-							<a href="https://celebritymention.com" target="_blank" rel="noopener" class="image"><img src="images/proj-celebritymention.jpg" alt="CelebrityMention" /></a>
-							<div class="inner">
-								<h4>CelebrityMention.com</h4>
-								<p>Real-time celebrity-news intelligence. Ingests articles from 30+ feeds, embeds them with NVIDIA NIM models, and matches each story to the right person via <strong>pgvector vector-similarity search</strong> across 76K+ articles and 22K+ embedded entities &mdash; with a dominance gate to eliminate false positives. Includes <strong>PodTalk</strong>, a YouTube-transcript pipeline that extracts verbatim quotes with automated fact-checking (94% exact, zero fabrication).</p>
-								<ul class="actions special">
-									<li><a href="https://celebritymention.com" target="_blank" rel="noopener" class="button primary">View Project</a></li>
-								</ul>
-							</div>
-						</article>
-
-						<article>
 							<a href="https://allmyquotes.com" target="_blank" rel="noopener" class="image"><img src="images/proj-allmyquotes.jpg" alt="AllMyQuotes" /></a>
 							<div class="inner">
 								<h4>AllMyQuotes.com</h4>
@@ -405,18 +442,6 @@
 								<p>Production document-ordering platform for apostille &amp; notarized-translation services. 56 document types with dynamic forms, cart and guest/OTP checkout via Stripe, auto-generated invoices and order references, an admin order desk, and Telegram alerts &mdash; on a Next.js/PostgreSQL stack with full SEO architecture (per-document pages, sitemap, JSON-LD).</p>
 								<ul class="actions special">
 									<li><a href="https://laurela.com" target="_blank" rel="noopener" class="button primary">View Project</a></li>
-								</ul>
-							</div>
-						</article>
-
-						<article>
-							<a href="https://boss.cc" target="_blank" rel="noopener" class="image"><img src="images/proj-boss.jpg" alt="Boss.cc" /></a>
-							<div class="inner">
-								<h4>Boss.cc</h4>
-								<p>Multi-model AI evaluation platform that validates startup ideas by orchestrating an ensemble of five large language models (Llama-4 Maverick, Qwen3-Next 80B, Mistral Medium 3.5, and NVIDIA Nemotron 30B/49B reasoning models) across five assessment lenses &mdash; feasibility, market sizing, competition, unit economics, and risk &mdash; with an LLM synthesis judge producing a GO / PIVOT / NO-GO verdict in ~10 seconds.</p>
-								<p>Behind it runs an automated discovery pipeline: hourly <strong>Airflow</strong> DAGs ingest Stack Exchange, Hacker News, Lobsters and Dev.to, embed and dedup with <strong>pgvector</strong>, extract and TRIZ-score candidate ideas, then auto-publish the strongest &mdash; with provider failover across the model chain and a weekly literary-voice digest.</p>
-								<ul class="actions special">
-									<li><a href="https://boss.cc" target="_blank" rel="noopener" class="button primary">View Project</a></li>
 								</ul>
 							</div>
 						</article>
@@ -451,17 +476,6 @@
 								<p>An automated daily Data &amp; AI news pipeline: ingests stories from many sources, analyzes and clusters them, then synthesizes and <strong>narrates</strong> a short audio briefing engineers can listen to on the commute &mdash; published every evening with a calendar of past episodes.</p>
 								<ul class="actions special">
 									<li><a href="https://www.kargin-utkin.com/news/daily" target="_blank" rel="noopener" class="button primary">View Project</a></li>
-								</ul>
-							</div>
-						</article>
-
-						<article>
-							<a href="https://tennis.us" target="_blank" rel="noopener" class="image"><img src="images/proj-tennis.jpg" alt="Tennis.us" /></a>
-							<div class="inner">
-								<h4>Tennis.us</h4>
-								<p>AI-powered tennis community platform built across 14 phases. <strong>Geospatial venue clustering</strong> groups raw court polygons into named venues with addresses and directions; <strong>AI player-matchmaking</strong> pairs players by level and location; plus ladders, matches, events, and a full design system &mdash; on a Next.js/FastAPI stack with production deploy parity.</p>
-								<ul class="actions special">
-									<li><a href="https://tennis.us" target="_blank" rel="noopener" class="button primary">View Project</a></li>
 								</ul>
 							</div>
 						</article>
