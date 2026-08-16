@@ -1,31 +1,30 @@
 # STATUS — alexnews.github.io
 
-Static portfolio site (HTML5 UP "Read Only" template). Single page: `index.html`.
+Static portfolio site (HTML5 UP "Read Only" template). Pages: `index.html` and
+`code-with-claude-2026/index.html`.
 Deployed by GitHub Pages from `main`. **Anything pushed to `main` is live immediately.**
 
-## BLOCKING — do not push until resolved
+## BLOCKING — live bug on the production site
 
-`index.html` contains two literal placeholders in the **Education & Certifications** section:
+`index.html:462` (Education & Certifications) contains two literal placeholders that are
+**already live and visible to anyone reading the page**:
 
 - `[[UNIVERSITY_NAME]]`
 - `[[YEAR]]`
 
-They render as visible text on the page. Fill them in before pushing, or delete the
-Master's line. Search: `grep -n '\[\[' index.html`
+The earlier "do not push until resolved" note did not prevent this — the line was committed
+and shipped. Fix by filling in the real university and year, or delete the Master's line.
+Search: `grep -n '\[\[' index.html`
 
 ## In flight
 
-Uncommitted working-tree changes to `index.html` (recruiter-credibility pass), pending Alex's review:
+Committed locally, **not yet pushed** — awaiting Alex's decision on the placeholder above:
 
-- Added `#experience` section (7 roles, Silicon Army → LiveIntent) + nav entry.
-- Added `#education` section (Master's + SnowPro Core). No nav entry by design.
-- Removed the dead `Download CV` button (it pointed at `href="#"`).
-- Rewrote `About Me` to lead with employment history and migration work; added a
-  **semantic layer** paragraph linking to Alex's own 2026-08-08 Daily AI Brief analysis.
-- Rewrote `Skills`: added Data Migration & Modernization, Snowflake Platform,
-  Database Engineering & Production Support, Delivery & Collaboration.
-- Updated `<title>` / meta description / JSON-LD; removed `PySpark` from JSON-LD
-  `knowsAbout` (Alex will not defend it in interview).
+- New page `code-with-claude-2026/` — summaries of all 19 talks from Anthropic's Code with
+  Claude 2026 conference, with direct video links. Full-length source notes and transcripts
+  live in `HQ/youtube/`.
+- `index.html`: added `#notes` section + nav entry linking to the new page.
+- Added `sitemap.xml` (`robots.txt` referenced it but it did not exist — was returning 404).
 
 ## Open decisions for Alex
 
@@ -43,13 +42,20 @@ Databricks, Terraform, Kubernetes, Tableau, LangChain, MCP, Salesforce, clearanc
 Never add a technology keyword to `Skills` that is not backed by a role in `#experience`.
 Never invent employers, titles, dates, metrics, degrees, or certifications.
 
-## Verified (2026-08-09)
+## Verified (2026-08-15)
 
-- JSON-LD parses; HTML tag balance clean.
-- All 5 nav anchors resolve; only remaining `href="#"` is the `#logo` template idiom.
+- JSON-LD parses on both pages; HTML tag balance clean on both.
+- All 19 YouTube IDs on the notes page cross-checked against the resolved source list, in order.
+- `/`, `/code-with-claude-2026/` and `/sitemap.xml` all return 200 locally.
+- Notes page renders correctly and matches template styling; anchor links (`#talk-N`) work.
+- Zero forbidden keywords in user-visible text on either page (notes page originally said
+  "MCP server" for the Google Cloud talk — reworded to "live documentation service").
+
+## Verified earlier (2026-08-09)
+
+- All 5 original nav anchors resolve; only remaining `href="#"` is the `#logo` template idiom.
 - All 18 external links return HTTP 200.
 - Renders correctly at 1440x900 and 390x844 (mobile nav panel includes Experience).
-- Zero forbidden keywords in user-visible text.
 
 ## Local preview
 

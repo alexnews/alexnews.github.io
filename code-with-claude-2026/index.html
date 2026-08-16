@@ -1,0 +1,531 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Code with Claude 2026 — All 19 Talks, Summarized | Alex Kargin</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="All 19 talks from Anthropic's Code with Claude 2026 conference in San Francisco — 8 hours 23 minutes of video, each summarized in a few sentences with direct links. Covers Claude Code, prompt caching, agent memory, evals, and how GitHub, Cursor, Replit, Vercel, Datadog and Harvey build on Claude." />
+	<meta name="author" content="Alex Kargin" />
+	<link rel="canonical" href="https://alexnews.github.io/code-with-claude-2026/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Code with Claude 2026 — All 19 Talks, Summarized" />
+	<meta property="og:description" content="8h23m of Anthropic's Code with Claude 2026 conference, compressed. Every talk summarized in a few sentences, with direct video links." />
+	<meta property="og:url" content="https://alexnews.github.io/code-with-claude-2026/" />
+	<meta property="og:image" content="https://alexnews.github.io/images/avatar.jpg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Code with Claude 2026 — All 19 Talks, Summarized" />
+	<meta name="twitter:description" content="8h23m of Anthropic's Code with Claude 2026 conference, compressed. Every talk summarized in a few sentences, with direct video links." />
+	<meta name="twitter:image" content="https://alexnews.github.io/images/avatar.jpg" />
+	<link rel="icon" href="../favicon.ico" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"headline": "Code with Claude 2026 — All 19 Talks, Summarized",
+		"description": "All 19 talks from Anthropic's Code with Claude 2026 conference, each summarized in a few sentences with direct links to the video.",
+		"datePublished": "2026-08-15",
+		"dateModified": "2026-08-15",
+		"url": "https://alexnews.github.io/code-with-claude-2026/",
+		"mainEntityOfPage": "https://alexnews.github.io/code-with-claude-2026/",
+		"author": {
+			"@type": "Person",
+			"name": "Alex Kargin",
+			"url": "https://alexnews.github.io/"
+		},
+		"publisher": {
+			"@type": "Person",
+			"name": "Alex Kargin",
+			"url": "https://alexnews.github.io/"
+		},
+		"about": [
+			"Claude Code",
+			"AI agents",
+			"Anthropic",
+			"Prompt caching",
+			"Agent evaluation",
+			"Context engineering"
+		]
+	}
+	</script>
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{ "@type": "ListItem", "position": 1, "name": "Alex Kargin", "item": "https://alexnews.github.io/" },
+			{ "@type": "ListItem", "position": 2, "name": "Code with Claude 2026", "item": "https://alexnews.github.io/code-with-claude-2026/" }
+		]
+	}
+	</script>
+
+	<style>
+	.page-intro {
+		border-bottom: 1px solid rgba(210, 215, 217, 0.75);
+		padding-bottom: 1.5em;
+		margin-bottom: 2em;
+	}
+	.page-intro .kicker {
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: #999;
+		margin-bottom: 0.5em;
+	}
+	.takeaways {
+		background: #f7f8f9;
+		border-left: 3px solid #47b7e8;
+		padding: 1.5em 1.5em 0.75em 1.75em;
+		margin-bottom: 2.5em;
+		border-radius: 3px;
+	}
+	.takeaways h3 { margin-bottom: 0.75em; }
+	.takeaways ol { margin-bottom: 1em; }
+	.takeaways li { margin-bottom: 0.6em; }
+	.talk {
+		padding: 1.5em 0;
+		border-bottom: 1px solid rgba(210, 215, 217, 0.75);
+	}
+	.talk:last-of-type { border-bottom: 0; }
+	.talk h3 {
+		margin-bottom: 0.3em;
+		line-height: 1.35;
+	}
+	.talk h3 .talk-num {
+		color: #47b7e8;
+		font-weight: 700;
+		margin-right: 0.35em;
+	}
+	.talk-meta {
+		font-size: 0.85rem;
+		color: #888;
+		margin-bottom: 0.8em;
+	}
+	.talk-meta .sep { margin: 0 0.5em; opacity: 0.5; }
+	.talk p { margin-bottom: 0.8em; }
+	.talk .takeaway {
+		font-size: 0.95rem;
+		background: #f7f8f9;
+		padding: 0.7em 1em;
+		border-radius: 3px;
+		margin-bottom: 0;
+	}
+	.watch-link {
+		display: inline-block;
+		font-weight: 700;
+		font-size: 0.85rem;
+		white-space: nowrap;
+		color: #47b7e8;
+		border-bottom: 1px solid rgba(71, 183, 232, 0.4);
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+	}
+	.watch-link:hover {
+		color: #2a9fd4;
+		border-bottom-color: #2a9fd4;
+	}
+	.method {
+		font-size: 0.9rem;
+		color: #777;
+		background: #f7f8f9;
+		padding: 1.25em 1.5em;
+		border-radius: 3px;
+		margin-top: 2em;
+	}
+	.method p:last-child { margin-bottom: 0; }
+	.pick-list li { margin-bottom: 0.5em; }
+	@media screen and (max-width: 736px) {
+		.takeaways { padding: 1.25em 1.25em 0.5em 1.25em; }
+	}
+	</style>
+</head>
+<body class="is-preload">
+
+	<!-- Header -->
+	<section id="header">
+		<header>
+			<span class="image avatar"><img src="../images/avatar.jpg" alt="Alex Kargin" /></span>
+			<h1 id="logo"><a href="../">Alex Kargin</a></h1>
+			<p>Data &amp; AI Engineer</p>
+		</header>
+		<nav id="nav">
+			<ul>
+				<li><a href="../#about">About</a></li>
+				<li><a href="../#experience">Experience</a></li>
+				<li><a href="../#skills">Skills</a></li>
+				<li><a href="../#portfolio">Portfolio</a></li>
+				<li><a href="../#notes" class="active">Notes</a></li>
+				<li><a href="../#contact">Contact</a></li>
+			</ul>
+		</nav>
+		<footer>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/kargin/" target="_blank" rel="me noopener" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/alexnews" target="_blank" rel="me noopener" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="https://x.com/alexnews_kargin" target="_blank" rel="me noopener" class="icon brands fa-twitter"><span class="label">X</span></a></li>
+				<li><a href="https://www.youtube.com/@data-ml-engineer" target="_blank" rel="me noopener" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				<li><a href="mailto:alex.kargin@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+		</footer>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<div id="main">
+
+			<section>
+				<div class="container">
+
+					<div class="page-intro">
+						<div class="kicker">Notes &middot; August 2026</div>
+						<h2>Code with Claude 2026 — all 19 talks, summarized</h2>
+						<p>Anthropic published 8 hours and 23 minutes of talks from their <em>Code with Claude</em> developer
+						conference in San Francisco. Most of it is worth watching, but almost nobody has a full working day to spend
+						on conference video.</p>
+						<p>So I pulled the transcript of every one of the 19 talks and compressed each into a few sentences —
+						what it's actually about, and the one thing worth taking away. Direct video links throughout, so you can
+						jump straight to the ones that matter to you and skip the rest.</p>
+					</div>
+
+					<div class="takeaways">
+						<h3>Five things nearly every speaker said, independently</h3>
+						<ol>
+							<li><strong>The bottleneck moved off writing code.</strong> It's now verification, review, security and
+							taste. Dario Amodei framed it as Amdahl's law: speed one thing up and whatever you didn't speed up
+							becomes the constraint.</li>
+							<li><strong>Delete your scaffolding.</strong> Retry loops, tool routers, RAG, chunking, screenshot
+							coordinate math — all absorbed into the models. Removing code now often <em>raises</em> performance.</li>
+							<li><strong>Verification is what unlocks autonomy.</strong> Bun's bot can't open a pull request without a
+							test that fails before the change and passes after. That single rule is what makes running hundreds of
+							agents overnight safe.</li>
+							<li><strong>Expect to re-architect at every model step-change.</strong> Harvey did it three times. The
+							thing to invest in isn't the architecture — it's logging, replay and evals, because those tell you
+							whether the new model actually helped.</li>
+							<li><strong>Give the agent a computer.</strong> A sandbox, a browser, a CLI, a file system. Cursor,
+							Vercel, Replit and Anthropic all converged on this, and on file-system memory replacing bespoke RAG.</li>
+						</ol>
+					</div>
+
+					<h3>If you only have two hours</h3>
+					<ul class="pick-list">
+						<li><a href="#talk-8">#8 Getting more out of the Claude Platform</a> — prompt caching, context engineering,
+						the advisor pattern. Straight cost savings.</li>
+						<li><a href="#talk-5">#5 Building on Claude at GitHub scale</a> — cache-hit-rate engineering and two
+						reusable review patterns.</li>
+						<li><a href="#talk-10">#10 The capability curve</a> — cut your prompts, fix your evals, close the loop.</li>
+						<li><a href="#talk-4">#4 Live coding with Boris Cherny &amp; Jarred Sumner</a> — what a genuinely closed
+						autonomous loop looks like in a real repository.</li>
+					</ul>
+
+					<hr />
+
+					<h3>All 19 talks</h3>
+
+					<div class="talk" id="talk-1">
+						<h3><span class="talk-num">1.</span>Opening Keynote</h3>
+						<div class="talk-meta">47:29<span class="sep">&middot;</span>Anthropic
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=GMIWm5y90xA" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>No new model — a product keynote built on one framing: model capability is on an exponential, but
+						organizations adopt on a linear, and the gap between the two is the whole opportunity. Announcements
+						include doubled Claude Code rate limits, multi-agent orchestration, outcomes (define success and let
+						Claude iterate until a grader passes it), and "dreaming," where agents review past sessions overnight and
+						write what they learned into memory.</p>
+						<p class="takeaway"><strong>Stat worth quoting:</strong> Stripe converted 50,000 lines of Scala to Java in
+						four days against a ten-engineer-week estimate; Mercado Libre runs 23,000 engineers on Claude Code.</p>
+					</div>
+
+					<div class="talk" id="talk-2">
+						<h3><span class="talk-num">2.</span>A conversation with Dario &amp; Daniela Amodei</h3>
+						<div class="talk-meta">33:10<span class="sep">&middot;</span>Anthropic co-founders
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=7xco5Qd2Oo8" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>The headline number: Anthropic planned for 10x annual growth and saw roughly 80x annualized in Q1 —
+						which is the real reason behind the compute crunch and rate limits. Dario expects the unit of leverage to
+						move from individual productivity to whole teams and organizations, and renewed his prediction of a
+						one-person billion-dollar company in 2026.</p>
+						<p class="takeaway"><strong>Takeaway:</strong> retry things that failed six months ago. Capability jumps
+						light up products that were previously impossible — they built a Claude Code-like tool in 2022 and the
+						models simply weren't good enough yet.</p>
+					</div>
+
+					<div class="talk" id="talk-3">
+						<h3><span class="talk-num">3.</span>What's new in Claude Code</h3>
+						<div class="talk-meta">24:56<span class="sep">&middot;</span>Dixon Tsai, Anthropic
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=IMZa42k6L6M" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>A feature tour in two halves. Developer experience: remote control (start a session on your laptop,
+						continue from your phone), flicker-free full-screen rendering, and a rebuilt desktop GUI. Autonomy: auto
+						mode, where a classifier approves permission prompts unless an action looks destructive or like prompt
+						injection; first-class git worktrees; automatic memory; and routines that fire on a schedule, a webhook or
+						an API call with no human present.</p>
+						<p class="takeaway"><strong>Steal this:</strong> a daily routine that triages new GitHub issues and posts a
+						digest to Slack.</p>
+					</div>
+
+					<div class="talk" id="talk-4">
+						<h3><span class="talk-num">4.</span>Live coding session with Boris Cherny and Jarred Sumner</h3>
+						<div class="talk-meta">32:00<span class="sep">&middot;</span>Creators of Claude Code and Bun
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=DlTCu_pNDHE" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>The single most convincing demo of the event. Bun runs a bot that automatically reproduces every
+						incoming GitHub issue and opens a pull request — and it is now a larger contributor to Bun than Jarred
+						himself. The rule that makes it safe: the bot cannot open a PR unless it ships a test that fails on the old
+						build and passes on the new one.</p>
+						<p class="takeaway"><strong>Generalize it:</strong> point the same pipeline at customer support tickets
+						instead of GitHub issues, and anything repeatable goes into CLAUDE.md so the next run gets it right first
+						time.</p>
+					</div>
+
+					<div class="talk" id="talk-5">
+						<h3><span class="talk-num">5.</span>Caching, harnesses and advisors: building on Claude at GitHub scale</h3>
+						<div class="talk-meta">26:15<span class="sep">&middot;</span>GitHub Copilot
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=y5TmF_6o6xk" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>The most operationally useful talk of the conference. Copilot runs at a 94–96% prompt-cache hit rate and
+						treats 70% as evidence of a bug — the usual culprits are dynamic content in the system prompt and
+						dynamically loaded tools, both of which invalidate everything behind them. They also debunk "long context
+						costs more": a smaller context window tripled their compaction rate, and compaction burns expensive output
+						tokens.</p>
+						<p class="takeaway"><strong>Two patterns:</strong> the <em>advisor</em> (cheap model executes, expensive
+						model is consulted only on the hard step) and <em>rubber duck</em> (a cross-model critique after the plan,
+						after a complex implementation, and after writing tests but before running them). Also: measure survival
+						rate of accepted code, not acceptance rate.</p>
+					</div>
+
+					<div class="talk" id="talk-6">
+						<h3><span class="talk-num">6.</span>Getting to production faster with Claude Managed Agents</h3>
+						<div class="talk-meta">17:25<span class="sep">&middot;</span>Anthropic
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=E9gaQHrw_rg" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>Framed by research on where developers actually get stuck: one in three struggle with context management,
+						half say infrastructure is their number-one production blocker, and most run agents with no formal
+						observability at all.</p>
+						<p class="takeaway"><strong>Worth stealing even without the product:</strong> <em>outcomes</em> — instead of
+						a prompt, give the agent a rubric defining "done," and let a separate grader send it back until it passes.
+						In their demo that loop autonomously took a dashboard from 37 seconds to 10 with no human tuning.</p>
+					</div>
+
+					<div class="talk" id="talk-7">
+						<h3><span class="talk-num">7.</span>Building AI-native: inside the stacks powering Cognition, Gamma and Harvey</h3>
+						<div class="talk-meta">28:15<span class="sep">&middot;</span>Cognition, Gamma, Harvey
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=OFDm3T7pVlc" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>The recurring confession: all three companies completely re-architected at every model step-change, and
+						all three say that is simply the cost of doing business. Cognition threw away elaborate custom code-editing
+						technology once models could edit natively, and custom planning and memory systems once models could just
+						use a file system.</p>
+						<p class="takeaway"><strong>The advice that matters:</strong> don't over-invest in the agent architecture —
+						it will be scrapped. Invest in logging, observability, replay and evals, because that is what tells you
+						whether a new model made things better. And note Harvey's caution: individual productivity gains spread
+						widely do not equal organizational productivity.</p>
+					</div>
+
+					<div class="talk" id="talk-8">
+						<h3><span class="talk-num">8.</span>Getting more out of the Claude Platform</h3>
+						<div class="talk-meta">28:15<span class="sep">&middot;</span>Brad Abrams, Anthropic
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=7oO37GRhwGk" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>The most practical talk for anyone paying an API bill, in strict order of operations. First, prompt
+						caching — a 90% discount on input tokens, and cached tokens don't count against rate limits. Second,
+						context engineering: defer-load tool definitions so unused tools never enter context, let the model write
+						code to extract only the few bytes it needs from large tool results, and use compaction as the sledgehammer.
+						Third, the advisor strategy.</p>
+						<p class="takeaway"><strong>Warning he repeats:</strong> avoid framework abstractions that hide what's
+						actually in the context. You cannot engineer what you cannot see.</p>
+					</div>
+
+					<div class="talk" id="talk-9">
+						<h3><span class="talk-num">9.</span>How Datadog built a universal machine tool for Claude Code</h3>
+						<div class="talk-meta">30:50<span class="sep">&middot;</span>Datadog
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=EdmuYPBt_EM" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>The most conceptually ambitious talk. Datadog built a Kafka-compatible streaming system with Claude Code
+						in about a week — a comparable system built by hand took them a year — and shadow tests suggest it could be
+						two to five times cheaper than what they run today. The blocker isn't building it; it's the operational
+						mileage a system must earn before anyone other than its author can run it.</p>
+						<p class="takeaway"><strong>Their answer:</strong> stop letting each agent session improvise throwaway glue.
+						Have it emit small, precise, human-readable specifications that are repeatable and reusable — the
+						jig-and-fixture move that turned mechanization into industrialization.</p>
+					</div>
+
+					<div class="talk" id="talk-10">
+						<h3><span class="talk-num">10.</span>The capability curve</h3>
+						<div class="talk-meta">15:05<span class="sep">&middot;</span>Alex Albert, Anthropic
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=tP4MGcJ80Y0" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>Where the model gains actually landed: planning (models now think before acting, so give them room),
+						error recovery (the old "doom loop" of retrying a broken fix until context died is largely gone), and
+						attention across very long runs, which means you no longer need to babysit the context window.</p>
+						<p class="takeaway"><strong>Three concrete tips:</strong> make your evals match your real traffic rather
+						than an academic benchmark; <em>delete</em> prompt rules you added for older models, because you often gain
+						performance by removing rather than adding; and give the agent a way to inspect its own output so it can
+						verify its work.</p>
+					</div>
+
+					<div class="talk" id="talk-11">
+						<h3><span class="talk-num">11.</span>Architecting for model step-changes: a fireside with Vercel's Guillermo Rauch</h3>
+						<div class="talk-meta">27:15<span class="sep">&middot;</span>Vercel
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=bJKdXhnw7NU" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>Rauch's core move is giving every agent its own sandbox and then removing the scaffolding he'd built
+						around weaker models — when the newer model landed they deleted an entire autofix pipeline that existed
+						only to patch syntax errors. He gave the whole company an unlimited token budget, and the surprise was that
+						people used it to build their own internal tools.</p>
+						<p class="takeaway"><strong>The framing to keep:</strong> stop micromanaging agents with pre-mapped error
+						paths and fixed tools. He expects interaction to shift from synchronous to asynchronous — you become a board
+						member who gives an agent resources and a check-in date.</p>
+					</div>
+
+					<div class="talk" id="talk-12">
+						<h3><span class="talk-num">12.</span>Building with Claude Managed Agents and Asana AI teammates</h3>
+						<div class="talk-meta">24:57<span class="sep">&middot;</span>Asana
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=BrpB-h1e--k" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>Asana's pitch is "multiplayer" agents: an AI teammate is a real actor in the system with permissions,
+						shared memory and an audit trail, rather than a single-user chatbot you copy and paste out of. You assign it
+						work like a person, several colleagues steer it in comments, and corrections persist so the next person
+						doesn't hit the same mistake.</p>
+						<p class="takeaway"><strong>Worth your time only if</strong> you care about enterprise agent permissions and
+						human-in-the-loop approval flows.</p>
+					</div>
+
+					<div class="talk" id="talk-13">
+						<h3><span class="talk-num">13.</span>Running an AI-native engineering org</h3>
+						<div class="talk-meta">28:38<span class="sep">&middot;</span>Fiona Fung, Anthropic
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=igO8iyca2_g" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>The best management talk of the set. What breaks when coding stops being the bottleneck: near-zero design
+						docs (ship three prototype PRs and debate the actual diffs), no six-month roadmaps, every manager starts as
+						an individual contributor, and explicit permission to kill old processes — because processes never kill
+						themselves.</p>
+						<p class="takeaway"><strong>Do this on Monday:</strong> pick your noisiest recurring meeting or workflow and
+						ask whether it still serves its original purpose.</p>
+					</div>
+
+					<div class="talk" id="talk-14">
+						<h3><span class="talk-num">14.</span>The thinking lever</h3>
+						<div class="talk-meta">24:02<span class="sep">&middot;</span>Matt Bleifer, Anthropic
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=OXJO4LldSnc" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>The clearest available explanation of "effort" as a dial. Same model, same prompt, ten times the tokens
+						produces visibly better work — demonstrated with a traffic simulation that goes from crude to genuinely good
+						as effort increases. Effort beats a thinking on/off toggle because a toggle constrains <em>how</em> the
+						model works, while effort tells it <em>how hard to try</em>.</p>
+						<p class="takeaway"><strong>Rule of thumb:</strong> for coding work, use a large model at low effort rather
+						than a small model at high effort when the task needs intelligence but you want speed.</p>
+					</div>
+
+					<div class="talk" id="talk-15">
+						<h3><span class="talk-num">15.</span>Building with Claude on Google Cloud</h3>
+						<div class="talk-meta">26:29<span class="sep">&middot;</span>Google Cloud
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=SqHsS737CeA" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>A live end-to-end build: napkin sketch to wireframe to UI to a Cloud Run, Firestore and BigQuery backend,
+						then a security review and deploy — with Claude Code wearing five different job hats. The Google-specific
+						parts are a live documentation service and deployment skills, so you can ship on GCP without knowing GCP.</p>
+						<p class="takeaway"><strong>Largely a platform demo</strong> — skip it unless you deploy on Google Cloud.</p>
+					</div>
+
+					<div class="talk" id="talk-16">
+						<h3><span class="talk-num">16.</span>Evaluating and improving Replit Agent at scale</h3>
+						<div class="talk-meta">27:42<span class="sep">&middot;</span>Replit
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=snroDwX1-JU" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>The best talk on evals. Replit's argument is that SWE-bench-style benchmarks don't fit their users, who
+						write no tests and start from an empty repository — what matters is "does the app do what was asked." They
+						launched an open benchmark built from real product specs and graded by an agent that opens a browser and
+						clicks through a plain-English test plan, plus a system that clusters millions of production traces to find
+						failures that never show up in a dashboard.</p>
+						<p class="takeaway"><strong>Notable finding:</strong> models are roughly twice as bad at extending their own
+						generated code as they are at fresh code. Test between features or you're building on sand.</p>
+					</div>
+
+					<div class="talk" id="talk-17">
+						<h3><span class="talk-num">17.</span>Giving coding agents their own computers: how Cursor built cloud agents</h3>
+						<div class="talk-meta">14:35<span class="sep">&middot;</span>Cursor
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=BbYSGxtsMic" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>Cursor onboards agents the way it onboards people: give them a computer, a working dev environment and
+						documentation. They built an onboarding agent that explores a repository to work out how to <em>run</em> it,
+						and a CLI so agents stop burning time waiting on services.</p>
+						<p class="takeaway"><strong>The best idea in the talk:</strong> every agent is instructed to report anything
+						broken, annoying or confusing into a shared system of record, which humans triage and fix — agents improving
+						their own working conditions. Agents also record video demos, so you review the demo before the diff.</p>
+					</div>
+
+					<div class="talk" id="talk-18">
+						<h3><span class="talk-num">18.</span>Memory and dreaming for self-learning agents</h3>
+						<div class="talk-meta">24:28<span class="sep">&middot;</span>Anthropic
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=RtywqDFBYnQ" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>Memory modelled as a plain file system the model manages with bash and grep rather than a bespoke memory
+						API, with read-only and read-write scopes, version history and per-agent attribution. The new idea is
+						"dreaming": an out-of-band job that reads recent session transcripts, finds patterns no single agent could
+						see, verifies and de-duplicates memory, and writes back an improved state.</p>
+						<p class="takeaway"><strong>Numbers cited:</strong> Rakuten reported a 90% drop in first-pass mistakes;
+						Harvey reported a sixfold increase in task completion on a legal benchmark.</p>
+					</div>
+
+					<div class="talk" id="talk-19">
+						<h3><span class="talk-num">19.</span>The expanding toolkit</h3>
+						<div class="talk-meta">21:22<span class="sep">&middot;</span>Anthropic
+							<span class="sep">&middot;</span>
+							<a class="watch-link" href="https://www.youtube.com/watch?v=KLCuxMDZSDg" target="_blank" rel="noopener">Watch &rarr;</a>
+						</div>
+						<p>The clearest statement of the conference's central theme: the scaffolding you built last year now ships
+						inside the model. Tool routers, retry loops, chunking and RAG, manual cache breakpoints and screenshot
+						rescaling maths have all been absorbed.</p>
+						<p class="takeaway"><strong>The rule to keep:</strong> code that compensates for model unreliability has a
+						half-life of months; code that connects the model to <em>your</em> data and tools compounds. Practical wins:
+						describe tool <em>output</em> schemas as well as inputs, and clear stale tool results from context.</p>
+					</div>
+
+					<div class="method">
+						<p><strong>How this was made.</strong> Nine of the nineteen talks had usable captions. The other ten had none
+						at all, so I downloaded the audio and transcribed roughly four and a half hours of it locally with Whisper,
+						then re-ran three files that came back with transcription loops and checked every transcript for repetition
+						damage before summarizing. Summaries are mine; any errors are mine too.</p>
+						<p>Notice something wrong, or think I mis-ranked a talk? <a href="mailto:alex.kargin@gmail.com">Tell me</a>.</p>
+					</div>
+
+					<p style="margin-top:2em;"><a href="../">&larr; Back to Alex Kargin's portfolio</a></p>
+
+				</div>
+			</section>
+
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+
+</body>
+</html>
