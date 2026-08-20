@@ -1,7 +1,7 @@
 # STATUS — alexnews.github.io
 
-Static portfolio site (HTML5 UP "Read Only" template). Pages: `index.html` and
-`code-with-claude-2026/index.html`.
+Static portfolio site (HTML5 UP "Read Only" template).
+
 Deployed by GitHub Pages from `main`. **Anything pushed to `main` is live immediately.**
 
 
