@@ -4,33 +4,28 @@ Static portfolio site (HTML5 UP "Read Only" template). Pages: `index.html` and
 `code-with-claude-2026/index.html`.
 Deployed by GitHub Pages from `main`. **Anything pushed to `main` is live immediately.**
 
-## BLOCKING — live bug on the production site
 
-`index.html:462` (Education & Certifications) contains two literal placeholders that are
-**already live and visible to anyone reading the page**:
+## Live pages
 
-- `[[UNIVERSITY_NAME]]`
-- `[[YEAR]]`
+- `index.html` — main portfolio.
+- `code-with-claude-2026/` — summaries of all 19 talks from Anthropic's Code with Claude
+  2026 conference, with video links. Source notes live in `HQ/youtube/`.
+- `navigator/` — one-page Navigator AI architecture draft, written for the Flash Global
+  interview (Aug 2026). `noindex` + disallowed in `robots.txt`, so it is reachable by link
+  only and stays out of search. Regenerate the shareable PDF by printing it from Chrome
+  headless in light theme; the current PDF lives in
+  `~/Downloads/000RESUME/interviews-20260817/`.
+- `sitemap.xml` — referenced by `robots.txt`; previously 404'd.
 
-The earlier "do not push until resolved" note did not prevent this — the line was committed
-and shipped. Fix by filling in the real university and year, or delete the Master's line.
-Search: `grep -n '\[\[' index.html`
-
-## In flight
-
-Committed locally, **not yet pushed** — awaiting Alex's decision on the placeholder above:
-
-- New page `code-with-claude-2026/` — summaries of all 19 talks from Anthropic's Code with
-  Claude 2026 conference, with direct video links. Full-length source notes and transcripts
-  live in `HQ/youtube/`.
-- `index.html`: added `#notes` section + nav entry linking to the new page.
-- Added `sitemap.xml` (`robots.txt` referenced it but it did not exist — was returning 404).
 
 ## Open decisions for Alex
 
 - **CV file.** No `Alex_Kargin_Resume.pdf` exists in the repo, so the header button was
   removed rather than left dead. Commit the PDF to the repo root and re-add the button
   (the removed markup is left as an HTML comment in `index.html`, in `#header > header`).
+- **Push discipline.** `main` deploys instantly, and a `git push` ships *every* unpushed
+  commit — not just the newest. Check `git log origin/main..HEAD` before pushing when
+  anything is being held back deliberately.
 - **`Apache Kafka`** is still listed in JSON-LD `knowsAbout`. It is pre-existing, appears
   nowhere else on the page, and is not corroborated by any listed role. Keep or drop?
 
